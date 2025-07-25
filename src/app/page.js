@@ -17,17 +17,6 @@ const MotionBox = motion(Box);
 // Project data with hard-coded links
 const featuredProjects = [
   {
-    title: "Portfolio Website",
-    description: "A modern portfolio showcasing my projects and skills with React, Next.js, and Chakra UI. Features responsive design and interactive elements.",
-    image: "/assets/projects/PortfolioWebsiteCap.png",
-    technologies: [
-      { label: "React", color: "react" },
-      { label: "Next.js", color: "blue" },
-      { label: "Chakra UI", color: "purple" }
-    ],
-    projectLink: "/projects/portfolio-website"
-  },
-  {
     title: "Defenders of the Dune",
     description: "A strategic action game set in a harsh desert world. I led the game design and UX/UI design, focusing on engaging mechanics and intuitive interfaces.",
     image: "/assets/projects/DoDImg1.jpg",
@@ -38,6 +27,17 @@ const featuredProjects = [
       { label: "Figma", color: "red" }
     ],
     projectLink: "/projects/defenders-of-the-dune"
+  },
+  {
+    title: "Portfolio Website",
+    description: "A modern portfolio showcasing my projects and skills with React, Next.js, and Chakra UI. Features responsive design and interactive elements.",
+    image: "/assets/projects/PortfolioWebsiteCap.png",
+    technologies: [
+      { label: "React", color: "react" },
+      { label: "Next.js", color: "blue" },
+      { label: "Chakra UI", color: "purple" }
+    ],
+    projectLink: "/projects/portfolio-website"
   },
   {
     title: "Marble Tutorial Series",

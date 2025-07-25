@@ -37,7 +37,7 @@ export default function PortfolioWebsitePage() {
       {/* Main Image */}
       <Box mb={8} borderRadius="xl" overflow="hidden" boxShadow="2xl">
         <Image
-          src="/assets/projects/portfolio.jpg"
+          src="/assets/projects/PortfolioWebsiteCap.png"
           alt="Portfolio Website"
           width="100%"
           height="400px"
