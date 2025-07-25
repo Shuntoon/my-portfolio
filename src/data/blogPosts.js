@@ -20,6 +20,7 @@ Stay tuned for more content coming soon!
     `,
     image: "/images/blog/sponge.jpg"
   },
+  
   {
     slug: "my-creative-process",
     title: "My Creative Process",
