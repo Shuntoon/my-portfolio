@@ -25,6 +25,7 @@
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0",
+    "rehype-raw": "^7.0.0",
     "three": "^0.178.0",
     "typeface-jetbrains-mono": "^2.0.1"
   }
