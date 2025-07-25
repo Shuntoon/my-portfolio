@@ -37,7 +37,7 @@ function MyModel({ modelPath, spin }) {
       ref.current.scale.set(scale, scale, scale);
       // Spin if enabled
       if (spin) {
-        ref.current.rotation.y += delta * 0.7;
+        ref.current.rotation.y += delta * 0.35; // Spin speed
       }
     }
   });
@@ -91,9 +91,9 @@ export default function ModelViewer({ modelPath, shadowHeight = -1 }) {
           <planeGeometry args={[10, 10]} />
           <shadowMaterial opacity={0.5} />
         </mesh>
-        {/* Render the animated model, spin on mobile */}
-        <MyModel modelPath={modelPath} spin={isMobile} />
-        {/* Controls for rotating the model (disabled on mobile) */}
+        {/* Render the animated model, spin on all devices */}
+        <MyModel modelPath={modelPath} spin={true} />
+        {/* Controls for rotating the model (still enabled on desktop) */}
         {!isMobile && (
           <OrbitControls enablePan={false} enableZoom={false} />
         )}

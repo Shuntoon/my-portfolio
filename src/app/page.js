@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, Separator } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import HomeSection from './home/HomeSection.js';
 import { blogPosts } from "@/data/blogPosts";
@@ -89,12 +89,15 @@ export default function HomePage() {
           Passionate about crafting engaging gameplay and intuitive user interfaces.
         </Text>
       </Box>
-      
+
+      {/* Separator between Hero and Featured Projects */}
+      <Separator my={12} maxW="1000px" mx="auto" borderWidth="3px" borderColor={{ base: "gray.600", _dark: "gray.500" }} />
+
       {/* Featured Projects Section */}
       <Box py={16}>
         <GradientHeading 
           as="h2" 
-          size="xl" 
+          size="2xl" 
           textAlign="center"
           mb={3}
         >
@@ -142,8 +145,20 @@ export default function HomePage() {
           ))}
         </Flex>
       </Box>
-      
+
+      {/* Separator between Featured Projects and Blog */}
+      <Separator my={12} maxW="1000px" mx="auto" borderWidth="3px" borderColor={{ base: "gray.600", _dark: "gray.500" }} />
+
       {/* Blog Posts Section */}
+      <GradientHeading 
+        as="h2" 
+        size="2xl" 
+        textAlign="center"
+        mb={-12}
+      >
+        My Blog
+      </GradientHeading>
+
       <Box py={16}>
         {/* Add section description */}
         <Text 

@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Flex, Text, Link, Icon, HStack } from '@chakra-ui/react';
-import { FaGamepad, FaYoutube, FaPalette } from 'react-icons/fa';
+import { FaGamepad, FaYoutube, FaPalette, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -64,7 +64,7 @@ export default function Footer() {
             <Icon as={FaYoutube} boxSize={5} />
             <Text fontSize="sm">YouTube</Text>
           </Link>
-          
+
           <Link 
             href="https://artstation.com/yourprofile" 
             isExternal
@@ -80,6 +80,23 @@ export default function Footer() {
           >
             <Icon as={FaPalette} boxSize={5} />
             <Text fontSize="sm">ArtStation</Text>
+          </Link>
+
+          <Link 
+            href="https://linkedin.com/in/your-linkedin-profile" 
+            isExternal
+            display="flex"
+            alignItems="center"
+            gap={2}
+            color={{ base: "gray.700", _dark: "gray.300" }}
+            _hover={{ 
+              color: { base: "blue.600", _dark: "blue.400" },
+              transform: "scale(1.1)"
+            }}
+            transition="all 0.3s ease"
+          >
+            <Icon as={FaLinkedin} boxSize={5} />
+            <Text fontSize="sm">LinkedIn</Text>
           </Link>
         </HStack>
       </Flex>
