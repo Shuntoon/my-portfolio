@@ -155,9 +155,9 @@ export default function ContactSection() {
             ) : (
               // Contact form
               <form
-                action="https://formspree.io/f/xpwldlyn" // <-- replace with your Formspree endpoint
+                action="https://formspree.io/f/xpwldlyn"
                 method="POST"
-                onSubmit={() => setSubmitted(true)}
+                /*onSubmit={() => setSubmitted(true)}*/
               >
                 <VStack spacing={3}>
                   <Input 
