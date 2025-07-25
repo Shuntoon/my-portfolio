@@ -113,7 +113,6 @@ export default function AboutSection() {
         border="1px solid"
         borderColor={{ base: "rgba(255, 255, 255, 0.2)", _dark: "rgba(255, 255, 255, 0.1)" }}
         boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)"
-        whileHover={{ scale: 1.01 }}
         transition={{ duration: 0.3 }}
       >
         <Stack
@@ -123,7 +122,7 @@ export default function AboutSection() {
           w="100%"
           justify="center"
         >
-          <Box
+          <MotionBox
             w="150px"
             h="150px"
             borderRadius="full"
@@ -132,6 +131,11 @@ export default function AboutSection() {
             borderColor={{ base: "rgba(255, 255, 255, 0.3)", _dark: "rgba(255, 255, 255, 0.2)" }}
             boxShadow="0 4px 20px rgba(0, 0, 0, 0.15)"
             mr={{ base: 0, md: 8 }}
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.7, type: "spring" }
+            }}
+            cursor="pointer"
           >
             <img
               src="/assets/Face.jpg"
@@ -142,7 +146,7 @@ export default function AboutSection() {
                 objectFit: "cover"
               }}
             />
-          </Box>
+          </MotionBox>
           <Box maxW="lg" display="flex" alignItems="center">
             <Box flex="1">
               <GradientHeading
@@ -173,7 +177,7 @@ export default function AboutSection() {
                 >
                   <Box
                     as={link.icon}
-                    boxSize={9}
+                    boxSize={{ base: 12, md: 9 }} // Bigger on mobile, normal on desktop
                     p={2}
                     bg="rgba(255,255,255,0.18)"
                     backdropFilter="blur(8px) saturate(180%)"
@@ -189,7 +193,7 @@ export default function AboutSection() {
                       bg: 'rgba(255,255,255,0.28)'
                     }}
                     mr={2}
-                    mb={2} // Add margin bottom for extra spacing
+                    mb={2}
                   />
                 </a>
               ))}
