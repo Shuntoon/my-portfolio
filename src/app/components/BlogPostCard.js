@@ -7,11 +7,20 @@ import Image from 'next/image';
 
 const MotionBox = motion(Box);
 
-export default function BlogPostCard({ post, isCompact = false, isTaller = false }) {
+export default function BlogPostCard({ post, isCompact = false, isTaller = false, posts }) {
+  // If a posts array is passed, sort it by date (newest first)
+  const sortedPosts = posts
+    ? [...posts].sort((a, b) => new Date(b.date) - new Date(a.date))
+    : null;
+
+  // Use sortedPosts[0] if you want to always show the most recent post
+  // Otherwise, render as usual
+  const displayPost = sortedPosts ? sortedPosts[0] : post;
+
   return (
     <MotionBox
       as={NextLink}
-      href={`/blog/${post.slug}`} // This links to your dynamic route
+      href={`/blog/${displayPost.slug}`} // This links to your dynamic route
       // Glass effect styling
       bg={{ base: "rgba(255, 255, 255, 0.15)", _dark: "rgba(255, 255, 255, 0.1)" }}
       backdropFilter="blur(10px)"
@@ -36,11 +45,11 @@ export default function BlogPostCard({ post, isCompact = false, isTaller = false
       minH={isTaller ? "240px" : "auto"}
     >
       {/* Featured Image */}
-      {post.image && (
+      {displayPost.image && (
         <Box position="relative" height={isTaller ? "220px" : "180px"} width="100%">
           <Image
-            src={post.image}
-            alt={post.title}
+            src={displayPost.image}
+            alt={displayPost.title}
             fill
             style={{ 
               objectFit: 'cover',
@@ -60,7 +69,7 @@ export default function BlogPostCard({ post, isCompact = false, isTaller = false
               mb={3}
               color={{ base: "gray.800", _dark: "white" }}
             >
-              {post.title}
+              {displayPost.title}
             </Heading>
             
             <Text 
@@ -68,7 +77,7 @@ export default function BlogPostCard({ post, isCompact = false, isTaller = false
               color={{ base: "gray.600", _dark: "gray.300" }}
               mb={4}
             >
-              {post.date}
+              {displayPost.date}
             </Text>
             
             <Text 
@@ -77,7 +86,7 @@ export default function BlogPostCard({ post, isCompact = false, isTaller = false
               noOfLines={isTaller ? 3 : 2}
               lineHeight="1.7"
             >
-              {post.excerpt}
+              {displayPost.excerpt}
             </Text>
           </Box>
           

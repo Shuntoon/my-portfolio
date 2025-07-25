@@ -9,6 +9,7 @@ import NextLink from "next/link";
 import RelatedPosts from "../../components/RelatedPosts";
 import ReactMarkdown from 'react-markdown';
 import { motion } from 'framer-motion';
+import rehypeRaw from 'rehype-raw';
 
 // Create motion components
 const MotionBox = motion(Box);
@@ -107,7 +108,7 @@ export default function BlogPostPage({ params }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{post.content}</ReactMarkdown>
         </MotionBox>
         
         <Separator mb={8} />
