@@ -20,6 +20,15 @@ export default function ContactSection() {
     }, 3000);
   };
 
+  // Close handler that resets state immediately
+  const handleClose = () => {
+    setOpen(false);
+    // Reset submitted state after animation completes
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 300);
+  };
+
   // Custom email icon component
   const EmailIcon = () => (
     <svg
@@ -137,10 +146,7 @@ export default function ContactSection() {
                 <Button 
                   variant="ghost" 
                   w="full" 
-                  onClick={() => {
-                    setSubmitted(false);
-                    setOpen(false);
-                  }} 
+                  onClick={handleClose}
                   size="sm"
                 >
                   Close
@@ -148,7 +154,11 @@ export default function ContactSection() {
               </VStack>
             ) : (
               // Contact form
-              <form onSubmit={handleSubmit}>
+              <form
+                action="https://formspree.io/f/xpwldlyn" // <-- replace with your Formspree endpoint
+                method="POST"
+                onSubmit={() => setSubmitted(true)}
+              >
                 <VStack spacing={3}>
                   <Input 
                     type="text" 
