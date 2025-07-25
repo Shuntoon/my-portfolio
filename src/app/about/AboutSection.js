@@ -58,25 +58,25 @@ const interests = [
 const socialLinks = [
   {
     label: "YouTube",
-    url: "https://www.youtube.com/@yourchannel",
+    url: "https://www.youtube.com/@shuntoon",
     icon: FaYoutube,
     color: "#FF0000"
   },
   {
     label: "ArtStation",
-    url: "https://www.artstation.com/yourprofile",
+    url: "https://www.artstation.com/shuntoon",
     icon: FaArtstation,
     color: "#13AFF0"
   },
   {
     label: "LinkedIn",
-    url: "https://www.linkedin.com/in/yourprofile",
+    url: "https://www.linkedin.com/in/shane-huntoon",
     icon: FaLinkedin,
     color: "#0077B5"
   },
   {
     label: "Itch.io",
-    url: "https://yourname.itch.io/",
+    url: "https://shuntoon.itch.io/",
     icon: FaItchIo,
     color: "#FA5C5C"
   }

@@ -32,7 +32,7 @@ export default function Footer() {
         {/* Social Links */}
         <HStack spacing={6}>
           <Link 
-            href="https://your-itch-profile.itch.io" 
+            href="https://shuntoon.itch.io" 
             isExternal
             display="flex"
             alignItems="center"
@@ -49,7 +49,7 @@ export default function Footer() {
           </Link>
           
           <Link 
-            href="https://youtube.com/@yourchannel" 
+            href="https://youtube.com/@shuntoon" 
             isExternal
             display="flex"
             alignItems="center"
@@ -66,7 +66,7 @@ export default function Footer() {
           </Link>
 
           <Link 
-            href="https://artstation.com/yourprofile" 
+            href="https://artstation.com/shuntoon" 
             isExternal
             display="flex"
             alignItems="center"
@@ -83,7 +83,7 @@ export default function Footer() {
           </Link>
 
           <Link 
-            href="https://linkedin.com/in/your-linkedin-profile" 
+            href="https://linkedin.com/in/shane-huntoon" 
             isExternal
             display="flex"
             alignItems="center"
