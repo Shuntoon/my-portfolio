@@ -8,6 +8,7 @@ import Image from "next/image";
 import NextLink from "next/link";
 import RelatedPosts from "../../components/RelatedPosts";
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import { motion } from 'framer-motion';
 
 // Create motion components
@@ -89,7 +90,7 @@ export default function BlogPostPage({ params }) {
         <MotionText 
           fontSize="md" 
           color={{ base: "gray.600", _dark: "gray.400" }} 
-          mb={8}
+          mb={0}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -107,10 +108,10 @@ export default function BlogPostPage({ params }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <ReactMarkdown rehypePlugins={rehypeRaw}>{post.content}</ReactMarkdown>
         </MotionBox>
         
-        <Separator mb={8} />
+        <Separator my={8} borderColor={{ base: "gray.400", _dark: "gray.700" }} />
         
         <MotionFlex 
           justifyContent="space-between" 

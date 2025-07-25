@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, Separator } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import HomeSection from './home/HomeSection.js';
 import { blogPosts } from "@/data/blogPosts";
@@ -76,8 +76,6 @@ export default function HomePage() {
           Shane Huntoon
         </GradientHeading>
         <Text fontSize="xl">Game Developer & Designer</Text>
-        
-        {/* Add a more detailed tagline/bio */}
         <Text 
           fontSize="md" 
           maxW="600px" 
@@ -89,18 +87,20 @@ export default function HomePage() {
           Passionate about crafting engaging gameplay and intuitive user interfaces.
         </Text>
       </Box>
-      
+
+      {/* Separator between Hero and Featured Projects */}
+      <Separator my={12} maxW="1000px" mx="auto" borderColor={{ base: "gray.400", _dark: "gray.500" }} borderWidth="2px" />
+
       {/* Featured Projects Section */}
       <Box py={16}>
         <GradientHeading 
           as="h2" 
-          size="xl" 
+          size="2xl" 
           textAlign="center"
           mb={3}
         >
           Featured Projects
         </GradientHeading>
-        
         <Text 
           textAlign="center" 
           maxW="700px" 
@@ -111,8 +111,6 @@ export default function HomePage() {
           A selection of my best work showcasing my skills in web development,
           design, and problem-solving.
         </Text>
-        
-        {/* Project items with square cards */}
         <Flex
           maxW="1200px"
           mx="auto"
@@ -136,16 +134,27 @@ export default function HomePage() {
                 description={project.description}
                 image={project.image}
                 technologies={project.technologies}
-                projectLink={project.projectLink} // Pass the hard-coded link
+                projectLink={project.projectLink}
               />
             </Box>
           ))}
         </Flex>
       </Box>
-      
+
+      {/* Separator between Featured Projects and Blog Posts */}
+<Separator my={12} maxW="1000px" mx="auto" borderColor={{ base: "gray.400", _dark: "gray.500" }} borderWidth="2px" />
+
+        <GradientHeading 
+          as="h1" 
+          size="2xl" 
+          textAlign="center"
+          mb={-12}
+        >
+          My Blog
+        </GradientHeading>
+
       {/* Blog Posts Section */}
       <Box py={16}>
-        {/* Add section description */}
         <Text 
           textAlign="center" 
           maxW="700px" 
@@ -156,7 +165,6 @@ export default function HomePage() {
           Thoughts, tutorials, and insights about web development, design trends,
           and my journey as a developer.
         </Text>
-        
         <RecentBlogPosts posts={recentPosts} />
       </Box>
     </MotionBox>

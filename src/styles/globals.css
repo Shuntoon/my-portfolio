@@ -140,3 +140,57 @@ html[data-theme="light"] body::before {
     rgba(0, 0, 0, 0.18) 17px
   );
 }
+
+/* Enforce bullets and spacing for markdown lists in blog content */
+.blog-content ul {
+  list-style-type: square;
+  margin-left: .5em;
+  padding-left: .5em;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+  margin-left: .5em;
+  padding-left: .5em;
+}
+
+.blog-content li {
+  margin-bottom: 0.4em;
+}
+
+.blog-content img {
+  border-radius: 1rem; /* or any value you like */
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2em auto;
+}
+
+.blog-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 2em 0 1em 0;
+}
+
+.blog-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1.5em 0 0.75em 0;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.2em 0 0.6em 0;
+}
+
+/* Optional: add spacing for paragraphs and lists too */
+.blog-content p,
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 1em;
+}
+
+.highlight-red { color: #e53e3e; }
+.highlight-teal { color: teal; }

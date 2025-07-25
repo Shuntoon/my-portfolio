@@ -10,10 +10,10 @@ import ModelViewer from "../components/ModelViewer";
 const MotionBox = motion(Box);
 
 export default function BlogPage() {
-  // Sort blog posts by date (newest first)
+  // Sort blog posts by date (oldest first), then reverse for newest first at the top
   const sortedPosts = [...blogPosts].sort((a, b) => 
-    new Date(b.date) - new Date(a.date)
-  );
+    new Date(a.date) - new Date(b.date)
+  ).reverse();
 
   return (
     <MotionBox 

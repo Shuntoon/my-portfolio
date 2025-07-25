@@ -43,9 +43,16 @@ function GradientBackground() {
 }
 
 export default function RootLayout({ children }) {
+  // Inline script to set dark mode class before hydration
+  const setInitialColorMode = 
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+  ;
+
   return (
     <html lang="en">
       <body className={roboto.variable}>
+        <script dangerouslySetInnerHTML={{ __html: setInitialColorMode }} />
         <ChakraProvider value={theme}>
           <ColorModeProvider>
             <GradientBackground />
