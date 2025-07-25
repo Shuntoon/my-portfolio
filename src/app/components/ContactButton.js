@@ -1,11 +1,71 @@
 'use client';
 
 import { useState } from 'react';
-import { Box, Button, Input, Textarea, VStack, EmailIcon } from '@chakra-ui/react';
+import { Box, Button, Input, Textarea, VStack, Text } from '@chakra-ui/react';
 import { Collapsible } from '@chakra-ui/react';
 
 export default function ContactSection() {
   const [open, setOpen] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here (Formspree or your preferred method)
+    setSubmitted(true);
+    
+    // Reset after 3 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+      setOpen(false);
+    }, 3000);
+  };
+
+  // Custom email icon component
+  const EmailIcon = () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <polyline
+        points="22,6 12,13 2,6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+
+  // Custom check icon component
+  const CheckIcon = () => (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12" cy="12" r="10" fill="#10B981" />
+      <path
+        d="M9 12l2 2 4-4"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
 
   return (
     <>
@@ -64,65 +124,90 @@ export default function ContactSection() {
               borderColor: "rgba(255,255,255,0.08)"
             }}
           >
-            <form action="https://formspree.io/f/{your_form_id}" method="POST">
-              <VStack spacing={3}>
-                <Input 
-                  type="text" 
-                  name="name" 
-                  placeholder="Your name" 
-                  required 
-                  size="sm"
-                  bg="rgba(255,255,255,0.45)"
-                  borderColor="rgba(255,255,255,0.18)"
-                  color="gray.800"
-                  _dark={{
-                    bg: "rgba(30,30,30,0.45)",
-                    color: "white",
-                    borderColor: "rgba(255,255,255,0.08)"
-                  }}
-                />
-                <Input 
-                  type="email" 
-                  name="email" 
-                  placeholder="your@email.com" 
-                  required 
-                  size="sm"
-                  bg="rgba(255,255,255,0.45)"
-                  borderColor="rgba(255,255,255,0.18)"
-                  color="gray.800"
-                  _dark={{
-                    bg: "rgba(30,30,30,0.45)",
-                    color: "white",
-                    borderColor: "rgba(255,255,255,0.08)"
-                  }}
-                />
-                <Textarea 
-                  name="message" 
-                  placeholder="Your message..." 
-                  required 
-                  size="sm"
-                  bg="rgba(255,255,255,0.45)"
-                  borderColor="rgba(255,255,255,0.18)"
-                  color="gray.800"
-                  _dark={{
-                    bg: "rgba(30,30,30,0.45)",
-                    color: "white",
-                    borderColor: "rgba(255,255,255,0.08)"
-                  }}
-                />
-                <Button colorScheme="blue" type="submit" w="full" size="sm">
-                  Send
-                </Button>
+            {submitted ? (
+              // Thank you message
+              <VStack spacing={4} textAlign="center">
+                <CheckIcon />
+                <Text fontSize="lg" fontWeight="bold">
+                  Thank you!
+                </Text>
+                <Text fontSize="sm">
+                  Your message has been sent successfully.
+                </Text>
                 <Button 
                   variant="ghost" 
                   w="full" 
-                  onClick={() => setOpen(false)} 
+                  onClick={() => {
+                    setSubmitted(false);
+                    setOpen(false);
+                  }} 
                   size="sm"
                 >
-                  Cancel
+                  Close
                 </Button>
               </VStack>
-            </form>
+            ) : (
+              // Contact form
+              <form onSubmit={handleSubmit}>
+                <VStack spacing={3}>
+                  <Input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Your name" 
+                    required 
+                    size="sm"
+                    bg="rgba(255,255,255,0.45)"
+                    borderColor="rgba(255,255,255,0.18)"
+                    color="gray.800"
+                    _dark={{
+                      bg: "rgba(30,30,30,0.45)",
+                      color: "white",
+                      borderColor: "rgba(255,255,255,0.08)"
+                    }}
+                  />
+                  <Input 
+                    type="email" 
+                    name="email" 
+                    placeholder="your@email.com" 
+                    required 
+                    size="sm"
+                    bg="rgba(255,255,255,0.45)"
+                    borderColor="rgba(255,255,255,0.18)"
+                    color="gray.800"
+                    _dark={{
+                      bg: "rgba(30,30,30,0.45)",
+                      color: "white",
+                      borderColor: "rgba(255,255,255,0.08)"
+                    }}
+                  />
+                  <Textarea 
+                    name="message" 
+                    placeholder="Your message..." 
+                    required 
+                    size="sm"
+                    bg="rgba(255,255,255,0.45)"
+                    borderColor="rgba(255,255,255,0.18)"
+                    color="gray.800"
+                    _dark={{
+                      bg: "rgba(30,30,30,0.45)",
+                      color: "white",
+                      borderColor: "rgba(255,255,255,0.08)"
+                    }}
+                  />
+                  <Button colorScheme="blue" type="submit" w="full" size="sm">
+                    Send
+                  </Button>
+                  <Button 
+                    variant="ghost" 
+                    w="full" 
+                    onClick={() => setOpen(false)} 
+                    size="sm"
+                  >
+                    Cancel
+                  </Button>
+                </VStack>
+              </form>
+            )}
           </Box>
         </Collapsible.Content>
       </Collapsible.Root>
