@@ -91,7 +91,13 @@ export default function HomePage() {
       </Box>
 
       {/* Separator between Hero and Featured Projects */}
-      <Separator my={12} maxW="1000px" mx="auto" borderWidth="3px" borderColor={{ base: "gray.600", _dark: "gray.500" }} />
+      <Separator
+        my={12}
+        maxW={{ base: "80%", md: "1000px" }}
+        mx="auto"
+        borderWidth="3px"
+        borderColor={{ base: "gray.600", _dark: "gray.500" }}
+      />
 
       {/* Featured Projects Section */}
       <Box py={16}>
@@ -147,7 +153,13 @@ export default function HomePage() {
       </Box>
 
       {/* Separator between Featured Projects and Blog */}
-      <Separator my={12} maxW="1000px" mx="auto" borderWidth="3px" borderColor={{ base: "gray.600", _dark: "gray.500" }} />
+      <Separator
+        my={12}
+        maxW={{ base: "80%", md: "1000px" }}
+        mx="auto"
+        borderWidth="3px"
+        borderColor={{ base: "gray.600", _dark: "gray.500" }}
+      />
 
       {/* Blog Posts Section */}
       <GradientHeading 
