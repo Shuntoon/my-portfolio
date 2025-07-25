@@ -1,74 +1,55 @@
 export const blogPosts = [
-  /* Welcome post */
   {
-    slug: "welcome-to-my-site",
-    title: "Welcome to My Site!",
-    date: "2025-07-25",
-    excerpt: "A warm welcome, a quick intro, and why I built this site.",
+    slug: "my-first-post",
+    title: "My First Post",
+    date: "2025-07-01",
+    excerpt: "This is my very first blog post!",
     content: `
-## Welcome!
+# Welcome to my blog!
 
-Hi there, and welcome to my website! My name is **Shane Huntoon**, and I'm excited to finally have a space to share my journey, projects, and passions with you.
+This is my **first post** and I'm excited to share my thoughts with you.
 
-### Who am I?
+## What I'll be writing about
 
-I'm a developer and creator who loves:
-- Game development
-- Game art
-- Coding
-- Cooking
+- Web development
+- Design trends
+- Personal projects
+- Technology insights
 
-When I'm not working on digital projects, you'll probably find me experimenting in the kitchen—**cooking** is another big passion of mine!
-
-
-<br />
-
-### **Why this website?**
-
-
-This is my **very first attempt** at building a personal website like this. My goal is to keep friends, collaborators, and anyone interested updated on:
-- What I'm working on
-- What I'm learning
-- What inspires me
-
-I've had a **lot of fun** making this site and learning new things along the way.
-
-<br />
-
-### **What to expect**
-
-Here, I'll be posting:
-- Updates about my latest projects
-- Insights from my creative process
-- Maybe even a few cooking adventures
-
-I hope you'll find something here that **inspires or interests you**!
-
-## Some of My Past Games
-
-Here are a few snapshots from games I've worked on:
-
-![Defenders of the Dune](/images/blog/welcome-to-my-site/DoDImg2.jpg)  
-**Defenders of the Dune** – A strategic action game set in a harsh desert world.
-
-![Lobo Game](/images/blog/welcome-to-my-site/LoboImg1.png)  
-**Lobo Game** – My homage to classic NES action games.
-
-![Marble Tutorial Series](/images/blog/welcome-to-my-site/MarbleImg1.png)  
-**Marble Tutorial Series** – Teaching 3D game dev with Godot 4.
-
-Thanks for stopping by, and stay tuned for more updates!
+Stay tuned for more content coming soon!
     `,
-    image: "/images/blog/welcome-to-my-site/MarbleImg1.png"
+    image: "/images/blog/sponge.jpg"
   },
-
-  /* July 2025 post
+  
   {
-    slug: "july-2025-update",
-    title: "July 2025 Update",
-    date: "2025-31-15",
-    excerpt: "A quick update on my latest projects and what I've been up to.",
-    content: `## July 2025 Update`
+    slug: "my-creative-process",
+    title: "My Creative Process",
+    date: "2025-06-28",
+    excerpt: "A behind-the-scenes look at how I approach new projects and creative challenges.",
+    content: `
+# My Creative Process
+
+Every creative project starts with inspiration and planning.
+
+## Finding Inspiration
+
+I draw inspiration from:
+
+- Nature and the outdoors
+- Other designers and creators
+- Art museums and galleries
+- Everyday observations
+
+## The Planning Phase
+
+Before diving into design software, I always:
+
+1. Define the problem clearly
+2. Research similar solutions
+3. Sketch ideas on paper
+4. Get early feedback
+5. Refine the concept
+    `
+    // This post doesn't have an image (it's optional)
   },
-  */
 ];

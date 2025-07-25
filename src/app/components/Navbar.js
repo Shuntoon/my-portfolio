@@ -72,8 +72,6 @@ export default function Navbar() {
         
         {/* Center: Site title/logo with astronaut icon */}
         <Box
-          as={NextLink}
-          href="/"
           color={{ base: "black", _dark: "white" }}
           fontWeight="bold"
           fontSize="xl"
@@ -84,12 +82,6 @@ export default function Navbar() {
           left="50%"
           transform="translateX(-50%)"
           gap={2}
-          transition="transform 0.3s cubic-bezier(.4,2,.3,1), font-size 0.3s cubic-bezier(.4,2,.3,1)"
-          _hover={{
-            cursor: 'pointer',
-            transform: 'translateX(-50%) scale(1.07)', // Slightly larger on hover
-            fontSize: { base: "1.4xl", md: "1.4xl" },    // Increase font size on hover
-          }}
         >
           <GiWhaleTail style={{ marginRight: 8 }} />
           Shane Huntoon
