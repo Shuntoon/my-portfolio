@@ -165,6 +165,7 @@ export default function Navbar() {
             // Styling for the dropdown container
             pb={4}
             bg={{ base: "rgba(255, 255, 255, 0.08)", _dark: "rgba(0, 0, 0, 0.15)" }}
+            mb={2}
             backdropFilter="blur(10px) saturate(180%)"
             borderBottomRadius="xl"
           >
@@ -174,7 +175,8 @@ export default function Navbar() {
               direction="column" 
               gap={3} 
               px={2} 
-              py={3}
+              py={2}
+              mb={-3}
             >
               {/* Map through links array to create mobile menu items */}
               {Links.map((link, index) => (
