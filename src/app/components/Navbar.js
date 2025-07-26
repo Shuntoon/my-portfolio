@@ -10,6 +10,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import NextLink from 'next/link';
 // Import custom color mode toggle button
 import { ColorModeButton } from "@/components/ui/color-mode";
+// Import custom gradient heading component
+import GradientHeading from "./GradientHeading";
 // Import icons from React Icons (Feather icon set)
 import { FiMenu, FiX } from 'react-icons/fi';
 // Importing an astronaut icon from Font Awesome
@@ -50,50 +52,55 @@ export default function Navbar() {
       bg={{ base: "rgba(255, 255, 255, 0.1)", _dark: "rgba(0, 0, 0, 0.2)" }}
       // Enhanced blur effect for the glass appearance
       backdropFilter="blur(20px) saturate(180%)"
+      // Rounded corners for modern look
+      borderRadius="xl"
       // Subtle border for definition
-      borderBottom="1px solid"
+      border="1px solid"
       borderColor={{ base: "rgba(255, 255, 255, 0.2)", _dark: "rgba(255, 255, 255, 0.1)" }}
       // Text color that adapts to color mode
       color={{ base: "black", _dark: "white" }}
       // Horizontal padding
       px={4}
+      // Margin for spacing from edges
+      mx={1}
+      mt={1}
       // Sticky positioning so navbar stays at the top during scroll
       position="sticky"
-      top={0}
+      top={1}
       // High z-index ensures navbar appears above other content
       zIndex={100}
       // Smooth transition for color mode changes
       transition="all 0.3s ease"
     >
       {/* Main navbar container with flexible layout */}
-      <Flex h={16} alignItems="center" justifyContent="space-between">
+      <Flex h={16} alignItems="center" justifyContent="space-between" position="relative">
         {/* Left side: Color mode toggle button */}
         <ColorModeButton />
         
-        {/* Center: Site title/logo with whale tail icon, now clickable */}
+        {/* Center: Site title/logo, now clickable */}
         <Box
           as={NextLink}
           href="/"
-          color={{ base: "black", _dark: "white" }}
-          fontWeight="bold"
-          fontSize="xl"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
           position="absolute"
           left="50%"
           transform="translateX(-50%)"
-          gap={2}
-          transition="transform 0.3s cubic-bezier(.4,2,.3,1), font-size 0.3s cubic-bezier(.4,2,.3,1)"
-          _hover={{
-
-            cursor: 'pointer',
-            transform: 'translateX(-50%) scale(1.07)',
-            fontSize: { base: "1.7xl", md: "1.7xl" },
-          }}
+          sx={{ textDecoration: 'none' }}
+          zIndex={10}
         >
-          <GiWhaleTail style={{ marginRight: 8 }} />
-          Shane Huntoon
+          <GradientHeading
+            as="h1"
+            size={{ base: "lg", md: "xl" }}
+            fontFamily="Montserrat, Open Sans, Segoe UI, Arial, sans-serif"
+            textAlign="center"
+            transition="transform 0.3s cubic-bezier(.4,2,.3,1), text-shadow 0.3s cubic-bezier(.4,2,.3,1)"
+            cursor="pointer"
+            _hover={{
+              transform: 'scale(1.08)',
+              textShadow: '0 0 16px #4fb1df, 0 0 32px #4c74f5, 0 0 48px #ff6b6b',
+            }}
+          >
+            Shane Huntoon
+          </GradientHeading>
         </Box>
         
         {/* Right side: Mobile menu toggle button (only visible on mobile) */}

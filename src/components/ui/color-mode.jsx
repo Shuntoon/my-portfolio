@@ -42,10 +42,20 @@ export const ColorModeButton = React.forwardRef(
       <ClientOnly fallback={<Skeleton boxSize='8' />}>
         <IconButton
           onClick={toggleColorMode}
-          variant='ghost'
           aria-label='Toggle color mode'
           size='sm'
           ref={ref}
+          bg={{ base: "rgba(255,255,255,0.18)", _dark: "rgba(0,0,0,0.22)" }}
+          border="1.5px solid"
+          borderColor={{ base: "rgba(255,255,255,0.35)", _dark: "rgba(255,255,255,0.12)" }}
+          boxShadow={{ base: "0 2px 8px rgba(79,177,223,0.18)", _dark: "0 2px 8px rgba(44,116,245,0.22)" }}
+          color={{ base: "#d89b41ff", _dark: "#49548fff" }}
+          transition="all 0.2s cubic-bezier(.4,2,.3,1)"
+          _hover={{
+            bg: { base: "rgba(102, 176, 211, 0.18)", _dark: "rgba(76, 116, 245, 0.18)" },
+            color: { base: "#f81f1fff", _dark: "#2d67e4ff" },
+            boxShadow: '0 4px 16px rgba(79,177,223,0.18)',
+          }}
           {...props}
           css={{
             _icon: {

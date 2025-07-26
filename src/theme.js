@@ -1,13 +1,14 @@
 import { createSystem, defaultConfig } from '@chakra-ui/react';
-import '@fontsource/open-sans'
+import '@fontsource/jetbrains-mono';
+import '@fontsource/montserrat';
 
 const theme = createSystem(defaultConfig, {
   theme: {
     tokens: {
       fonts: {
-        body: { value: "Open Sans, Segoe UI, Arial, sans-serif" },
-        heading: { value: "Open Sans, Segoe UI, Arial, sans-serif" },
-        mono: { value: "Consolas, Menlo, Monaco, monospace" }
+        body: { value: "Jetbrains Mono, Segoe UI, Arial, sans-serif" },
+        heading: { value: "Montserrat, Segoe UI, Arial, sans-serif" },
+        mono: { value: "JetBrains Mono, Consolas, Menlo, Monaco, monospace" }
       },
       colors: {
         gradientStart: { value: "#ff6b6b" },
