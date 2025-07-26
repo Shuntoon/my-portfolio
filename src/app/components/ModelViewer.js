@@ -6,6 +6,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { useRef, useState } from 'react';
 import React from 'react';
+import { usePathname } from 'next/navigation'; // Add this import
 
 // Helper to detect mobile devices
 function useIsMobile() {
@@ -14,12 +15,23 @@ function useIsMobile() {
 }
 
 // 3D Model component with spring scale animation and optional spinning
-function MyModel({ modelPath, spin }) {
+function MyModel({ modelPath, spin, resetSpinSignal }) {
   const gltf = useGLTF(modelPath); // Load GLTF model
   const ref = useRef();            // Reference to the model
   const targetScale = 0.6;         // Final scale value
   const [scale, setScale] = useState(0.01); // Initial scale (starts small)
   const velocity = useRef(0);      // Spring velocity
+
+  // Track spin angle
+  const spinAngle = useRef(0);
+
+  // Reset spin when resetSpinSignal changes
+  React.useEffect(() => {
+    if (ref.current) {
+      ref.current.rotation.y = 0;
+      spinAngle.current = 0;
+    }
+  }, [resetSpinSignal]);
 
   // Animate scale with spring physics
   useFrame((state, delta) => {
@@ -32,13 +44,12 @@ function MyModel({ modelPath, spin }) {
     const nextScale = scale + velocity.current * delta; // Next scale value
     setScale(nextScale > 0.001 ? nextScale : 0.001); // Prevent scale from going too low
 
-    // Apply scale to the model
+    // Apply scale and spin
     if (ref.current) {
       ref.current.scale.set(scale, scale, scale);
-      // Spin if enabled
       if (spin) {
-        ref.current.rotation.y += delta * 0.35;
-        ref.current.rotation.y += delta * 0.35; // Spin speed
+        spinAngle.current += delta * 0.5;
+        ref.current.rotation.y = spinAngle.current;
       }
     }
   });
@@ -63,6 +74,8 @@ function MyModel({ modelPath, spin }) {
 export default function ModelViewer({ modelPath, shadowHeight = -1 }) {
   // Detect mobile mode (runs only on client)
   const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname(); // Get current route
+
   React.useEffect(() => {
     const check = () => setIsMobile(window.innerWidth <= 768);
     check();
@@ -72,11 +85,11 @@ export default function ModelViewer({ modelPath, shadowHeight = -1 }) {
 
   return (
     <Box w="100%" h="400px" mx="auto" mb={-8} mt={8}>
-      <Canvas shadows camera={{ position: [5, 5, 5], zoom: 2 }}>
+      <Canvas shadows camera={{ position: [0, 0, 5], zoom: 2 }}>
         {/* Lighting for the scene */}
         <ambientLight intensity={0.5} />
         <directionalLight
-          position={[10, 10, 0]} // Change this to set the shadow angle
+          position={[10, 10, 10]} // Change this to set the shadow angle
           intensity={2}
           castShadow
           shadow-mapSize-width={2048}
@@ -85,18 +98,12 @@ export default function ModelViewer({ modelPath, shadowHeight = -1 }) {
         />
         {/* Shadow receiving plane */}
         <mesh
-          receiveShadow
-          rotation={[-Math.PI / 2, 0, 0]}
-          position={[0, shadowHeight, 0]}
         >
           <planeGeometry args={[10, 10]} />
           <shadowMaterial opacity={0.5} />
         </mesh>
-        {/* Render the animated model, spin on mobile */}
-        <MyModel modelPath={modelPath} spin={isMobile} />
-        {/* Controls for rotating the model (disabled on mobile) */}
         {/* Render the animated model, spin on all devices */}
-        <MyModel modelPath={modelPath} spin={true} />
+        <MyModel modelPath={modelPath} spin={true} resetSpinSignal={pathname} />
         {/* Controls for rotating the model (still enabled on desktop) */}
         {!isMobile && (
           <OrbitControls enablePan={false} enableZoom={false} />

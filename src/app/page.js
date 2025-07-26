@@ -66,7 +66,7 @@ export default function HomePage() {
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
       {/* Hero Section */}
-      <ModelViewer modelPath="/models/joystick.glb" shadowHeight={-2.3} />
+      <ModelViewer modelPath="/models/logo.glb" shadowHeight={-2.3} />
       <Box textAlign="center" py={20}>
         <GradientHeading
           as="h1"
