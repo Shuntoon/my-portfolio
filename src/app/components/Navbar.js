@@ -133,8 +133,6 @@ export default function Navbar() {
                   color: { base: "#0a5679", _dark: "#a8b3beff" }, // Accent color on hover
                   transform: 'scale(1.08) translateY(-2px)', // Slightly larger and lifted
                   boxShadow: '0 4px 16px rgba(79,177,223,0.12)', // Subtle shadow
-                  textDecoration: 'underline',
-                  textUnderlineOffset: '4px',
                 }}
               >
                 {link.label}
@@ -209,8 +207,6 @@ export default function Navbar() {
                         color: { base: "#0a5679", _dark: "#a8a8be" },
                         transform: 'scale(1.04) translateY(-1px)',
                         boxShadow: '0 2px 8px rgba(79,177,223,0.10)',
-                        textDecoration: 'underline',
-                        textUnderlineOffset: '4px',
                       }}
                     >
                       {link.label}
