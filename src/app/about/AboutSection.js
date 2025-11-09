@@ -45,12 +45,12 @@ const interests = [
   {
     title: "Programming",
     icon: FaCode,
-    description: "I love tinkering with new technologies and constantly expanding my toobag."
+    description: "I love tinkering with new technologies and constantly expanding my toolbag."
   },
   {
     title: "Cooking",
     icon: FaUtensils,
-    description: "My first passion. Noything beats the satisfaction of creating and sharing delicious meals."
+    description: "My first passion. Nothing beats the satisfaction of creating and sharing delicious meals."
   }
 ];
 
