@@ -35,22 +35,22 @@ const interests = [
   {
     title: "Gaming",
     icon: FaGamepad,
-    description: "Love exploring virtual worlds, strategy games, and the artistry behind game design."
+    description: "Competitive games are some of my favorites. Currently playing League of Legends and 2XKO"
   },
   {
     title: "Sports",
     icon: FaBasketballBall,
-    description: "Enjoy staying active through basketball, hiking, and other sports for fun and fitness."
+    description: "I Enjoy staying active through pickleball, hiking, and other sports for fun and fitness."
   },
   {
     title: "Programming",
     icon: FaCode,
-    description: "Passionate about web development, creating interactive experiences, and learning new technologies."
+    description: "I love tinkering with new technologies and constantly expanding my toobag."
   },
   {
     title: "Cooking",
     icon: FaUtensils,
-    description: "Experimenting in the kitchen, trying new recipes, and sharing good food with friends and family."
+    description: "My first passion. Noything beats the satisfaction of creating and sharing delicious meals."
   }
 ];
 
