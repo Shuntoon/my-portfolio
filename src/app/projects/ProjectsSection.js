@@ -21,18 +21,6 @@ const allProjects = [
 		projectLink: '/projects/defenders-of-the-dune',
 	},
 	{
-		title: 'Lobo Game',
-		description: 'A homage to the classic NES game Jackal, built in Godot 4 with custom pixel art and modern UI/UX.',
-		image: '/assets/projects/LoboImg1.png',
-		technologies: [
-			{ label: 'Godot 4', color: 'purple' },
-			{ label: 'Aseprite', color: 'yellow' },
-			{ label: 'UI/UX Design', color: 'blue' },
-			{ label: 'Coding', color: 'green' }
-		],
-		projectLink: '/projects/lobo-game',
-	},
-	{
 		title: 'Portfolio Website',
 		description: 'A modern portfolio showcasing my projects and skills with React, Next.js, and Chakra UI. Features responsive design and interactive elements.',
 		image: '/assets/projects/PortfolioWebsiteCap.png',
