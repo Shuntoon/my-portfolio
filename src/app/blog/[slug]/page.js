@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { notFound } from "next/navigation";
-import { Box, Heading, Text, Container, Flex, Button, Separator, ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/react";
+import { Box, Heading, Text, Container, Flex, Button, Separator } from "@chakra-ui/react";
+import { ChevronLeftIcon, ChevronRightIcon } from 'react-icons/fa';
 import { blogPosts } from "@/data/blogPosts";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -122,7 +123,6 @@ export default function BlogPostPage({ params }) {
           {prevPost ? (
             <NextLink href={`/blog/${prevPost.slug}`} passHref>
               <Button 
-                leftIcon={<ChevronLeftIcon />}
                 variant="ghost"
                 size="md"
                 bg={{ base: "rgba(255, 255, 255, 0.1)", _dark: "rgba(255, 255, 255, 0.05)" }}
@@ -130,7 +130,7 @@ export default function BlogPostPage({ params }) {
                 border="1px solid"
                 borderColor={{ base: "rgba(255, 255, 255, 0.2)", _dark: "rgba(255, 255, 255, 0.1)" }}
               >
-                Previous Post
+                <ChevronLeftIcon style={{ marginRight: '6px' }} /> Previous Post
               </Button>
             </NextLink>
           ) : <Box />}
@@ -151,7 +151,6 @@ export default function BlogPostPage({ params }) {
           {nextPost ? (
             <NextLink href={`/blog/${nextPost.slug}`} passHref>
               <Button 
-                rightIcon={<ChevronRightIcon />}
                 variant="ghost"
                 size="md"
                 bg={{ base: "rgba(255, 255, 255, 0.1)", _dark: "rgba(255, 255, 255, 0.05)" }}
@@ -159,7 +158,7 @@ export default function BlogPostPage({ params }) {
                 border="1px solid"
                 borderColor={{ base: "rgba(255, 255, 255, 0.2)", _dark: "rgba(255, 255, 255, 0.1)" }}
               >
-                Next Post
+                Next Post <ChevronRightIcon style={{ marginLeft: '6px' }} />
               </Button>
             </NextLink>
           ) : <Box />}

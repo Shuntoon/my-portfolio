@@ -1,6 +1,7 @@
 'use client';
 
-import { Box, Heading, Text, VStack, AspectRatio, Grid, Button, ExternalLinkIcon } from '@chakra-ui/react';
+import { Box, Heading, Text, VStack, AspectRatio, Grid, Button } from '@chakra-ui/react';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import TechCapsule from '../../components/TechCapsule';
 
 const techs = [
@@ -127,7 +128,7 @@ export default function MarbleTutorialSeriesPage() {
           rel="noopener noreferrer"
           colorScheme="red"
           size="lg"
-          rightIcon={<ExternalLinkIcon />}
+          rightIcon={<FaExternalLinkAlt />}
           mb={4}
         >
           Watch on YouTube
