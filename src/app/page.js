@@ -29,15 +29,15 @@ const featuredProjects = [
     projectLink: "/projects/defenders-of-the-dune"
   },
   {
-    title: "Portfolio Website",
-    description: "A modern portfolio showcasing my projects and skills with React, Next.js, and Chakra UI. Features responsive design and interactive elements.",
-    image: "/assets/projects/PortfolioWebsiteCap.png",
+    title: "Wave Defender: Apocalypse",
+    description: "A wave defense game built for GitHub Game Off 2025 with my brother. Defend your castle from the undead and upgrade your arsenal across 10 escalating waves.",
+    image: "/images/blog/april-2026-update/wd1.png",
     technologies: [
-      { label: "React", color: "react" },
-      { label: "Next.js", color: "blue" },
-      { label: "Chakra UI", color: "purple" }
+      { label: "Godot 4", color: "purple" },
+      { label: "GitHub Game Off 2025", color: "green" },
+      { label: "Wave Defense", color: "red" }
     ],
-    projectLink: "/projects/portfolio-website"
+    projectLink: "/projects/wave-defender"
   },
   {
     title: "Marble Tutorial Series",

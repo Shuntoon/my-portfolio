@@ -9,6 +9,17 @@ const MotionBox = motion(Box);
 
 const allProjects = [
 	{
+		title: 'Wave Defender: Apocalypse',
+		description: 'A wave defense game built for GitHub Game Off 2025 with my brother. Defend your castle from the undead, upgrade your arsenal, and survive 10 escalating waves. Placed 30th out of 500+ entries in gameplay.',
+		image: '/images/blog/april-2026-update/wd1.png',
+		technologies: [
+			{ label: 'Godot 4', color: 'purple' },
+			{ label: 'GitHub Game Off 2025', color: 'green' },
+			{ label: 'Wave Defense', color: 'red' },
+		],
+		projectLink: '/projects/wave-defender',
+	},
+	{
 		title: 'Defenders of the Dune',
 		description: 'A strategic action game set in a harsh desert world, developed in collaboration with Wolversoft. I led gameplay UI design, gameplay systems, and assisted with art direction.',
 		image: '/assets/projects/DoDImg1.jpg',
@@ -21,17 +32,6 @@ const allProjects = [
 		projectLink: '/projects/defenders-of-the-dune',
 	},
 	{
-		title: 'Portfolio Website',
-		description: 'A modern portfolio showcasing my projects and skills with React, Next.js, and Chakra UI. Features responsive design and interactive elements.',
-		image: '/assets/projects/PortfolioWebsiteCap.png',
-		technologies: [
-			{ label: 'React', color: 'react' },
-			{ label: 'Next.js', color: 'blue' },
-			{ label: 'Chakra UI', color: 'purple' },
-		],
-		projectLink: '/projects/portfolio-website',
-	},
-	{
 		title: 'Marble Tutorial Series',
 		description: 'An educational YouTube series teaching 3D game development in Godot 4 by creating a marble obstacle course game similar to Marble Blast Ultra.',
 		image: '/assets/projects/MarbleImg1.png',
@@ -42,6 +42,17 @@ const allProjects = [
 			{ label: 'Education', color: 'green' }
 		],
 		projectLink: '/projects/marble-tutorial-series',
+	},
+	{
+		title: 'Portfolio Website',
+		description: 'A modern portfolio showcasing my projects and skills with React, Next.js, and Chakra UI. Features responsive design and interactive elements.',
+		image: '/assets/projects/PortfolioWebsiteCap.png',
+		technologies: [
+			{ label: 'React', color: 'react' },
+			{ label: 'Next.js', color: 'blue' },
+			{ label: 'Chakra UI', color: 'purple' },
+		],
+		projectLink: '/projects/portfolio-website',
 	},
 ];
 
