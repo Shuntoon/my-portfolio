@@ -3,7 +3,7 @@
 import React from 'react';
 import { notFound } from "next/navigation";
 import { Box, Heading, Text, Container, Flex, Button, Separator } from "@chakra-ui/react";
-import { ChevronLeftIcon, ChevronRightIcon } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { blogPosts } from "@/data/blogPosts";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -130,7 +130,7 @@ export default function BlogPostPage({ params }) {
                 border="1px solid"
                 borderColor={{ base: "rgba(255, 255, 255, 0.2)", _dark: "rgba(255, 255, 255, 0.1)" }}
               >
-                <ChevronLeftIcon style={{ marginRight: '6px' }} /> Previous Post
+                <FaChevronLeft style={{ marginRight: '6px' }} /> Previous Post
               </Button>
             </NextLink>
           ) : <Box />}
@@ -158,7 +158,7 @@ export default function BlogPostPage({ params }) {
                 border="1px solid"
                 borderColor={{ base: "rgba(255, 255, 255, 0.2)", _dark: "rgba(255, 255, 255, 0.1)" }}
               >
-                Next Post <ChevronRightIcon style={{ marginLeft: '6px' }} />
+                Next Post <FaChevronRight style={{ marginLeft: '6px' }} />
               </Button>
             </NextLink>
           ) : <Box />}
