@@ -6,7 +6,6 @@ import { Box, Heading, Text, Container, Flex, Button, Separator, ChevronLeftIcon
 import { blogPosts } from "@/data/blogPosts";
 import Image from "next/image";
 import NextLink from "next/link";
-import RelatedPosts from "../../components/RelatedPosts";
 import ReactMarkdown from 'react-markdown';
 import { motion } from 'framer-motion';
 import rehypeRaw from 'rehype-raw';
@@ -165,8 +164,6 @@ export default function BlogPostPage({ params }) {
             </NextLink>
           ) : <Box />}
         </MotionFlex>
-        
-        <RelatedPosts currentSlug={slug} posts={sortedPosts} />
       </MotionContainer>
     </MotionBox>
   );

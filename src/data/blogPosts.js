@@ -1,5 +1,78 @@
 export const blogPosts = [
   {
+    slug: "April-2026-update",
+    title: "April 2026: Kept you waiting, huh?",
+    date: "2026-04-17",
+    excerpt: "Been a while since the last update, but I've been busy with some exciting projects and adventures. Here's what's new!",
+    image: "/images/blog/april-2026-update/ts1.png",
+    content: `
+## It's Been a While
+
+Yeah, I know. The last update was back in August, and a lot has happened since then. Let me catch you up.
+
+## GitHub Game Off 2025
+
+Back in December, I participated in the **GitHub Game Off 2025** — a month-long game jam hosted by GitHub where developers build a game around a secret theme revealed at the start of the month.
+
+What made this one especially memorable was that I made it with my **brother**. It was his very first time making a game, and honestly, watching him go from zero to shipping something playable in a month was one of the coolest things I've been a part of.
+
+![Wave Defense Gameplay](/images/blog/april-2026-update/wd1.png)
+
+We built a **wave defense game** where you hold off waves of undead enemies storming your castle. Between rounds you head into an armory to kit yourself out with new weapons — snipers, grenade launchers, revolvers, the works.
+
+![Armory Screen](/images/blog/april-2026-update/wd2.png)
+
+We ended up placing **30th out of 500+ entries** in the gameplay category, which blew both of us away. For his first game and my first time collaborating that closely with a family member on something this involved, I couldn't be happier with how it turned out. Genuinely one of my favorite creative experiences in a while.
+
+## YouTube: My Prototypes Video
+
+A few months back I put out a video on my YouTube channel walking through a bunch of game prototypes I've been building. I'd been sitting on a lot of these ideas and wanted to actually get them out of my head and into something tangible. Here's the video:
+
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7bVJ0GS0SFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+And here's a quick rundown:
+
+**Slay the Teamfight** — A single-player autobattler inspired by the best parts of Teamfight Tactics and Slay the Spire. You acquire units and spells to conquer progressively harder battles. It was one of the most fun prototypes to build.
+
+**Vassals and Castles** — An online strategy game similar to chess, inspired by the classic game Feudal. Two to four players compete to capture their opponent's castle. Simple on the surface, deep in practice.
+
+**Tongue Puncher** — A 2D platformer built around fast, chaotic movement. You play as a critter with a hand at the end of its tongue, launching yourself through big playground-esque levels. It's as weird and fun as it sounds.
+
+**Final Fantasy Tactics 2 Combat PoC** — A recreation of the classic FFT combat system with a new twist: a materia/gem system inspired by Final Fantasy VII and Path of Exile. Slot gems into your equipment to modify your class — diversify your role or double down on your strengths. The prototype has the player equip a lightning gem and gain a lightning ability. I'm really excited about where this concept could go.
+
+**Top-Down Insaniquarium** — A reimagining of the PopCap classic from a top-down perspective. The new angle emphasizes mobility and gives the whole thing a top-down shooter feel. Surprisingly fresh take on a nostalgic game.
+
+**Archipelago** — An adventure roguelike set across a chain of islands. You explore, discover dungeons, and crawl through them. The goal is to blend classic roguelike gameplay with a lower-stakes, larger-scale world at a more deliberate pace. This one resonated the most with people.
+
+## What I'm Working On
+
+A couple of things on the horizon that I'm genuinely excited about.
+
+First, I've been developing a concept for a **tactics roguelike** heavily inspired by Slay the Spire. The core loop is still taking shape, but combining deckbuilding with tactical grid-based combat has been living rent-free in my head for a while now. More on this as it develops.
+
+![Tactics Prototype](/images/blog/april-2026-update/ts1.png)
+![Archipelago](/images/blog/april-2026-update/a1.png)
+
+Second — and this one I'm really looking forward to — I'll be teaming up with an **old friend** to develop **Archipelago** into a full game. It was the prototype that got the most attention in the video, and having a collaborator to build it out with feels like the right way to do it justice. Early days, but the energy is there.
+
+## On the Personal Side
+
+Outside of game dev, I've been picking up **Riftbound**, a card game I've been really enjoying lately. The new set just dropped and I'm itching to build a **Diana deck** — the cards synergize in a way that just clicks for me. Still learning the meta but already having a great time with it.
+
+And with the weather finally turning, I've been back on the **pickleball** court. There's something about playing outside when it's actually warm that makes the game feel completely different. Looking forward to getting some regular sessions in as spring settles in.
+
+## Until Next Time
+
+That's the update. Between the game jam, the YouTube video, the new projects in the works, and just life being busy, the past several months have been full in the best way. I'll try not to leave it another eight months before the next one.
+
+Thanks for reading.
+    `
+  },
+
+
+  {
     slug: "August-2025-update",
     title: "August 2025: Pickleball, Game Jams, and YouTube Plans",
     date: "2025-08-21",
@@ -57,6 +130,7 @@ Thanks for reading this far. If you've tried pickleball recently or participated
     `,
     image: "/images/blog/august-2025-update/pickleball_courts.jpg"
   },
+
   {
     slug: "welcome-to-my-site",
     title: "Welcome to My Site!",

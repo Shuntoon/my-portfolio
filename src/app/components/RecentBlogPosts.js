@@ -39,7 +39,6 @@ export default function RecentBlogPosts({ posts }) {
       <Box textAlign="center" mt={12}>
         <NextLink href="/blog" passHref>
           <Button
-            as="a"
             bg={{ base: "rgba(255, 255, 255, 0.15)", _dark: "rgba(255, 255, 255, 0.1)" }}
             backdropFilter="blur(10px)"
             border="1px solid"
