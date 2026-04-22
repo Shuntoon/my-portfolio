@@ -7,7 +7,9 @@ import {
   Stack,
   Icon,
   Heading,
-  SimpleGrid
+  SimpleGrid,
+  Button,
+  Image
 } from '@chakra-ui/react';
 import {
   FaCode,
@@ -28,6 +30,7 @@ import ModelViewer from '../components/ModelViewer';
 import InterestCard from '../components/InterestCard';
 import { motion } from 'framer-motion';
 import GradientHeading from '@/app/components/GradientHeading';
+import { FiDownload } from 'react-icons/fi';
 
 const MotionBox = motion(Box);
 
@@ -161,8 +164,7 @@ export default function AboutSection() {
               </GradientHeading>
               <Text fontSize="md" color={{ base: "gray.600", _dark: "gray.300" }}>
                 I'm a passionate developer who loves creating interactive web experiences and exploring new technologies. 
-                When I'm not coding, you can find me gaming, listening to music, or capturing moments through photography. 
-                I believe in continuous learning and bringing creativity to everything I do.
+                When I'm not coding, you can find me gaming, playing pickbleball, or cooking a meal in the kitchen. 
               </Text>
             </Box>
             {/* Social Links as Apple Glass Icons to the right of summary */}
@@ -202,6 +204,7 @@ export default function AboutSection() {
         </Stack>
       </MotionBox>
 
+
       {/* Interests Section with Glass Cards */}
       <MotionBox
         initial={{ opacity: 0, y: 20 }}
@@ -236,6 +239,47 @@ export default function AboutSection() {
           </VStack>
         </VStack>
       </MotionBox>
+
+      {/* Resume preview + download (placed under Interests) */}
+      <MotionBox
+        mt={8}
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45 }}
+        p={{ base: 6, md: 8 }}
+        borderRadius="2xl"
+        bg={{ base: "rgba(255, 255, 255, 0.04)", _dark: "rgba(0, 0, 0, 0.10)" }}
+        backdropFilter="blur(8px)"
+        border="1px solid"
+        borderColor={{ base: "rgba(255,255,255,0.06)", _dark: "rgba(255,255,255,0.03)" }}
+      >
+        <VStack spacing={6} align="center">
+          <GradientHeading as="h3" size="xl" textAlign="center">Resume</GradientHeading>
+
+
+          <Box w="100%" maxW="760px" borderRadius="xl" overflow="hidden" mt={2} mb={2}>
+            <Image src="/assets/huntoon_resume.png" alt="Resume preview" w="100%" h="auto" />
+          </Box>
+
+          <Button
+            as="a"
+            href="/assets/huntoon_resume.pdf"
+            download
+            leftIcon={<FiDownload />}
+            size="md"
+            mt={2}
+            bg={{ base: "rgba(79,177,223,0.14)", _dark: "rgba(110,189,226,0.18)" }}
+            border="1px solid"
+            borderColor={{ base: "rgba(79,177,223,0.24)", _dark: "rgba(110,189,226,0.20)" }}
+            color={{ base: "#0a5679", _dark: "#a8d8f0" }}
+          >
+            Download PDF
+          </Button>
+          
+        </VStack>
+      </MotionBox>
+
     </MotionBox>
+    
   );
 }
