@@ -2,7 +2,8 @@
 
 import { Box, Heading, Text, Image, Flex, Button, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import TechCapsule from '../../components/TechCapsule'; // <-- Use TechCapsule instead of ProjectCapsule
+import TechCapsule from '../../components/TechCapsule';
+import ProjectNav from '../../components/ProjectNav'; // <-- Use TechCapsule instead of ProjectCapsule
 import Link from 'next/link';
 
 const MotionBox = motion(Box);
@@ -92,6 +93,8 @@ export default function PortfolioWebsitePage() {
           View Code
         </Button>
       </Flex>
+
+      <ProjectNav currentSlug="portfolio-website" />
     </MotionBox>
   );
 }

@@ -3,6 +3,7 @@
 import { Box, Heading, Text, VStack, AspectRatio, Grid, Button } from '@chakra-ui/react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import TechCapsule from '../../components/TechCapsule';
+import ProjectNav from '../../components/ProjectNav';
 
 const techs = [
   { label: "Godot 4", color: "purple" },
@@ -137,6 +138,8 @@ export default function MarbleTutorialSeriesPage() {
           New episodes released regularly - Subscribe for updates!
         </Text>
       </Box>
+
+      <ProjectNav currentSlug="marble-tutorial-series" />
     </Box>
   );
 }

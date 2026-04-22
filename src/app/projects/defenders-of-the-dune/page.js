@@ -2,6 +2,7 @@
 
 import { Box, Heading, Text, Link, Image, AspectRatio, VStack, Button, Badge, Stack, Separator } from '@chakra-ui/react';
 import TechCapsule from '../../components/TechCapsule';
+import ProjectNav from '../../components/ProjectNav';
 
 const media = [
   {
@@ -167,6 +168,8 @@ export default function DefendersOfTheDunePage() {
           View on Steam
         </Button>
       </Box>
+
+      <ProjectNav currentSlug="defenders-of-the-dune" />
     </Box>
   );
 }

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import NextLink from 'next/link';
 import TechCapsule from '../../components/TechCapsule';
 import GradientHeading from '../../components/GradientHeading';
+import ProjectNav from '../../components/ProjectNav';
 import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box);
@@ -218,6 +219,8 @@ export default function WaveDefenderPage() {
           </VStack>
         </Stack>
       </MotionBox>
+
+      <ProjectNav currentSlug="wave-defender" />
     </MotionBox>
   );
 }

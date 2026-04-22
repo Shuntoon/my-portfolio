@@ -2,6 +2,7 @@
 
 import { Box, Heading, Text, Image, Flex, VStack } from '@chakra-ui/react';
 import TechCapsule from '../../components/TechCapsule';
+import ProjectNav from '../../components/ProjectNav';
 
 const technologies = [
   { label: "Godot 4", color: "purple" },
@@ -100,6 +101,8 @@ export default function LoboGamePage() {
           Stay tuned for updates and a playable demo!
         </Text>
       </Box>
+
+      <ProjectNav currentSlug="lobo-game" />
     </Box>
   );
 }
