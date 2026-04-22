@@ -7,7 +7,6 @@ import { projects } from '@/data/projects';
 
 const btnStyle = {
   variant: 'ghost',
-  size: 'md',
   bg: { base: 'rgba(255,255,255,0.10)', _dark: 'rgba(255,255,255,0.05)' },
   backdropFilter: 'blur(10px)',
   border: '1px solid',
@@ -36,8 +35,12 @@ export default function ProjectNav({ currentSlug }) {
       <Box justifySelf="start">
         {prev && (
           <NextLink href={prev.href} passHref>
-            <Button {...btnStyle}>
-              <FaChevronLeft style={{ marginRight: '6px' }} /> {prev.title}
+            <Button {...btnStyle} size={{ base: 'sm', md: 'md' }}>
+              <FaChevronLeft style={{ marginRight: '6px' }} />
+              <span style={{ display: 'inline' }}>
+                <span style={{ display: 'inline' }} className="mobile-label">Prev</span>
+                <span style={{ display: 'none' }} className="desktop-label">Previous Project</span>
+              </span>
             </Button>
           </NextLink>
         )}
@@ -46,7 +49,7 @@ export default function ProjectNav({ currentSlug }) {
       {/* Center — always centered */}
       <Box justifySelf="center">
         <NextLink href="/projects" passHref>
-          <Button {...btnStyle}>All Projects</Button>
+          <Button {...btnStyle} size={{ base: 'sm', md: 'md' }}>All Projects</Button>
         </NextLink>
       </Box>
 
@@ -54,8 +57,12 @@ export default function ProjectNav({ currentSlug }) {
       <Box justifySelf="end">
         {next && (
           <NextLink href={next.href} passHref>
-            <Button {...btnStyle}>
-              {next.title} <FaChevronRight style={{ marginLeft: '6px' }} />
+            <Button {...btnStyle} size={{ base: 'sm', md: 'md' }}>
+              <span style={{ display: 'inline' }}>
+                <span style={{ display: 'inline' }} className="mobile-label">Next</span>
+                <span style={{ display: 'none' }} className="desktop-label">Next Project</span>
+              </span>
+              <FaChevronRight style={{ marginLeft: '6px' }} />
             </Button>
           </NextLink>
         )}
