@@ -86,7 +86,7 @@ export default function HomePage() {
           color={{ base: "gray.600", _dark: "gray.300" }}
         >
           Creating immersive gaming experiences through innovative design and development. 
-          Passionate about crafting engaging gameplay and intuitive user interfaces.
+          Passionate about crafting engaging and immersive gameplay experiences.
         </Text>
       </Box>
 
@@ -117,8 +117,7 @@ export default function HomePage() {
           mb={8}
           color={{ base: "gray.600", _dark: "gray.300" }}
         >
-          A selection of my best work showcasing my skills in web development,
-          design, and problem-solving.
+          A selection of my best work showcasing some of my highlighted projects.
         </Text>
         
         {/* Project items with square cards */}
@@ -180,8 +179,7 @@ export default function HomePage() {
           mb={8}
           color={{ base: "gray.600", _dark: "gray.300" }}
         >
-          Thoughts, tutorials, and insights about web development, design trends,
-          and my journey as a developer.
+          Keeping you updated with news about projects and life.
         </Text>
         
         <RecentBlogPosts posts={recentPosts} />

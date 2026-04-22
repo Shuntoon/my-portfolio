@@ -38,7 +38,7 @@ const interests = [
   {
     title: "Gaming",
     icon: FaGamepad,
-    description: "Competitive games are some of my favorites. Currently playing League of Legends and 2XKO"
+    description: "Competitive games are some of my favorites. Currently playing League of Legends and Starcraft"
   },
   {
     title: "Sports",
