@@ -17,28 +17,21 @@ const roboto = Roboto({
 });
 
 function GradientBackground() {
-  // Get the current color mode directly from your ColorModeProvider
   const { colorMode } = useColorMode();
   const [isDark, setIsDark] = useState(false);
-  
-  // Update state when color mode changes
+
   useEffect(() => {
     setIsDark(colorMode === 'dark');
   }, [colorMode]);
-  
+
   return (
-    <>
-      <div 
-        id="gradient-light" 
-        className="gradient-bg"
-        style={{ opacity: isDark ? 0 : 1 }}
-      />
-      <div 
-        id="gradient-dark" 
-        className="gradient-bg"
-        style={{ opacity: isDark ? 1 : 0 }}
-      />
-    </>
+    <div id="mesh-bg" className={isDark ? 'mesh-dark' : 'mesh-light'}>
+      <div className="blob blob-1" />
+      <div className="blob blob-2" />
+      <div className="blob blob-3" />
+      <div className="blob blob-4" />
+      <div className="blob blob-5" />
+    </div>
   );
 }
 

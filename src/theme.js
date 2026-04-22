@@ -20,7 +20,7 @@ const theme = createSystem(defaultConfig, {
         variants: {
           gradient: {
             value: {
-              background: "linear-gradient(135deg, #4fb1dfff 0%, #4c74f5ff 100%)",
+              background: "linear-gradient(135deg, #5a9ec4ff 0%, #3a72b0ff 100%)",
               backgroundClip: "text",
               textFillColor: "transparent",
               color: "transparent",
