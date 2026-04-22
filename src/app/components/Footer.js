@@ -7,6 +7,7 @@ export default function Footer() {
   return (
     <Box 
       as="footer"
+      id="site-footer"
       mt="auto"
       py={8}
       px={4}

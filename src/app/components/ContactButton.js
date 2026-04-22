@@ -1,12 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Button, Input, Textarea, VStack, Text } from '@chakra-ui/react';
 import { Collapsible } from '@chakra-ui/react';
 
 export default function ContactSection() {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
+
+  // compute numeric bottoms (px). Default: sit at viewport bottom (24px).
+  // When footer is visible, raise the button and panel so they don't overlap the footer.
+  const buttonBottom = isFooterVisible ? 140 : 24; // px
+  const panelBottom = isFooterVisible ? 200 : 80; // px
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -76,14 +82,32 @@ export default function ContactSection() {
     </svg>
   );
 
+  // Observe footer intersection to lift the button when site footer is visible
+  useEffect(() => {
+    const footer = document.getElementById('site-footer') || document.querySelector('footer');
+    if (!footer || typeof IntersectionObserver === 'undefined') return;
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        setIsFooterVisible(entry.isIntersecting);
+      });
+    }, { root: null, threshold: 0 });
+
+    obs.observe(footer);
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <>
       {/* Floating Contact Button */}
       <Box
         position="fixed"
-        bottom={8}
         right={8}
         zIndex={200}
+        /* bottom is controlled dynamically so the button sits at the viewport bottom normally
+           and shifts up when the footer is visible */
+        bottom={buttonBottom + 'px'}
+        style={{ transition: 'bottom 0.28s cubic-bezier(.4, .0, .2, 1)' }}
       >
         <Button
           leftIcon={<EmailIcon />}
@@ -113,9 +137,11 @@ export default function ContactSection() {
         <Collapsible.Content>
           <Box
             position="fixed"
-            bottom={24}
             right={8}
             zIndex={201}
+            /* panel sits above the button; also moves up when footer is visible */
+            bottom={panelBottom + 'px'}
+            style={{ transition: 'bottom 0.28s cubic-bezier(.4, .0, .2, 1)' }}
             bg="rgba(255,255,255,0.25)"
             backdropFilter="blur(16px) saturate(180%)"
             color="gray.800"
