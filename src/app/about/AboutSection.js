@@ -164,7 +164,7 @@ export default function AboutSection() {
               </GradientHeading>
               <Text fontSize="md" color={{ base: "gray.600", _dark: "gray.300" }}>
                 I'm a game developer with a passion for turning ideas into simple and interactive experiences. 
-                I enjoy exploring new technologies, refining my craft, and taking on projects that challenge me to grow.
+                I enjoy exploring new technologies, refining my craft, and building new game projects, especially in Godot.
                 Outside of development, you'll usually find me gaming, playing pickleball, watching sports, or trying 
                 something new in the kitchen.
               </Text>
