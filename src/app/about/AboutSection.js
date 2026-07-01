@@ -163,8 +163,10 @@ export default function AboutSection() {
                 Shane Huntoon
               </GradientHeading>
               <Text fontSize="md" color={{ base: "gray.600", _dark: "gray.300" }}>
-                I'm a passionate developer who loves creating interactive web experiences and exploring new technologies. 
-                When I'm not coding, you can find me gaming, playing pickbleball, or cooking a meal in the kitchen. 
+                I'm a game developer with a passion for turning ideas into simple and interactive experiences. 
+                I enjoy exploring new technologies, refining my craft, and taking on projects that challenge me to grow.
+                Outside of development, you'll usually find me gaming, playing pickleball, watching sports, or trying 
+                something new in the kitchen.
               </Text>
             </Box>
             {/* Social Links as Apple Glass Icons to the right of summary */}
