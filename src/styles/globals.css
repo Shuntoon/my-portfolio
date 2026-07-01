@@ -16,7 +16,7 @@ html {
   transition: background-color 0.7s ease;
 }
 
-.mesh-dark  { background-color: #080d16; }
+.mesh-dark  { background-color: #111927; }
 .mesh-light { background-color: #f6f2e8; }
 
 /* subtle diagonal stripe texture placed on the mesh background */
@@ -45,85 +45,7 @@ html {
   opacity: 0.36;
 }
 
-/* Shared blob styles */
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(110px);
-  transition: background-color 0.7s ease, opacity 0.7s ease;
-  z-index: 1;
-}
 
-/* ── Dark mode blob colors ───────────────────────────────────────── */
-.mesh-dark .blob-1 { background: rgba(58,  100, 148, 0.55); }  /* deep ash blue  */
-.mesh-dark .blob-2 { background: rgba(72,  130, 172, 0.38); }  /* ash blue       */
-.mesh-dark .blob-3 { background: rgba(88,  120, 165, 0.45); }  /* slate ash blue */
-.mesh-dark .blob-4 { background: rgba(55,  125, 158, 0.32); }  /* teal ash blue  */
-.mesh-dark .blob-5 { background: rgba(110, 145, 182, 0.28); }  /* pale ash blue  */
-
-/* ── Light mode blob colors ─────────────────────────────────────── */
-.mesh-light .blob-1 { background: rgba(232, 222, 198, 0.80); } /* warm cream     */
-.mesh-light .blob-2 { background: rgba(198, 218, 232, 0.70); } /* pale ash blue  */
-.mesh-light .blob-3 { background: rgba(243, 233, 212, 0.85); } /* ivory cream    */
-.mesh-light .blob-4 { background: rgba(212, 228, 238, 0.65); } /* blue-white     */
-.mesh-light .blob-5 { background: rgba(246, 236, 212, 0.75); } /* light cream    */
-
-/* ── Blob sizes & start positions ──────────────────────────────── */
-.blob-1 {
-  width: 850px; height: 850px;
-  top: -220px; left: -150px;
-  animation: blobFloat1 22s ease-in-out infinite alternate;
-}
-.blob-2 {
-  width: 720px; height: 720px;
-  top: -120px; right: -200px;
-  animation: blobFloat2 28s ease-in-out infinite alternate;
-}
-.blob-3 {
-  width: 640px; height: 640px;
-  bottom: 80px; left: 28%;
-  animation: blobFloat3 20s ease-in-out infinite alternate;
-}
-.blob-4 {
-  width: 680px; height: 680px;
-  bottom: -160px; right: 8%;
-  animation: blobFloat4 25s ease-in-out infinite alternate;
-}
-.blob-5 {
-  width: 520px; height: 520px;
-  top: 38%; left: 38%;
-  animation: blobFloat5 17s ease-in-out infinite alternate;
-}
-
-/* ── Keyframe animations (each blob drifts independently) ───────── */
-@keyframes blobFloat1 {
-  0%   { transform: translate(0px, 0px)   scale(1);    }
-  33%  { transform: translate(180px, 140px) scale(1.08); }
-  66%  { transform: translate(80px, 280px)  scale(0.94); }
-  100% { transform: translate(260px, 90px)  scale(1.04); }
-}
-@keyframes blobFloat2 {
-  0%   { transform: translate(0px, 0px)     scale(1);    }
-  33%  { transform: translate(-140px, 180px) scale(1.1);  }
-  66%  { transform: translate(-280px, 90px)  scale(0.95); }
-  100% { transform: translate(-180px, 260px) scale(1.06); }
-}
-@keyframes blobFloat3 {
-  0%   { transform: translate(0px, 0px)     scale(1);    }
-  50%  { transform: translate(-180px, -140px) scale(1.12); }
-  100% { transform: translate(190px, -180px)  scale(0.91); }
-}
-@keyframes blobFloat4 {
-  0%   { transform: translate(0px, 0px)     scale(1);    }
-  40%  { transform: translate(-140px, -180px) scale(1.1);  }
-  100% { transform: translate(-280px, -90px)  scale(0.96); }
-}
-@keyframes blobFloat5 {
-  0%   { transform: translate(0px, 0px)    scale(1);    }
-  33%  { transform: translate(130px, -90px) scale(1.18); }
-  66%  { transform: translate(-130px, 90px) scale(0.82); }
-  100% { transform: translate(90px, 130px)  scale(1.08); }
-}
 
 
 
