@@ -43,17 +43,6 @@ const allProjects = [
 		],
 		projectLink: '/projects/marble-tutorial-series',
 	},
-	{
-		title: 'Portfolio Website',
-		description: 'A modern portfolio showcasing my projects and skills with React, Next.js, and Chakra UI. Features responsive design and interactive elements.',
-		image: '/assets/projects/PortfolioWebsiteCap.png',
-		technologies: [
-			{ label: 'React', color: 'react' },
-			{ label: 'Next.js', color: 'blue' },
-			{ label: 'Chakra UI', color: 'purple' },
-		],
-		projectLink: '/projects/portfolio-website',
-	},
 ];
 
 export default function ProjectsSection() {
