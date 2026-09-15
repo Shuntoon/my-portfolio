@@ -9,6 +9,17 @@ const MotionBox = motion(Box);
 
 const allProjects = [
 	{
+		title: 'Root and Shoot',
+		description: 'A bullet heaven where you play a little tree that roots and shoots enemies. Grab upgrades, fight bosses, and buy new gear. Made for the Global Game Jam 2023.',
+		image: '/assets/projects/Root1.png',
+		technologies: [
+			{ label: 'Godot 4', color: 'purple' },
+			{ label: 'Global Game Jam 2023', color: 'green' },
+			{ label: 'Bullet Heaven', color: 'red' },
+		],
+		projectLink: '/projects/root-and-shoot',
+	},
+	{
 		title: 'Wave Defender: Apocalypse',
 		description: 'A wave defense game built for GitHub Game Off 2025 with my brother. Defend your castle from the undead, upgrade your arsenal, and survive 10 escalating waves. Placed 30th out of 500+ entries in gameplay.',
 		image: '/images/blog/april-2026-update/wd1.png',

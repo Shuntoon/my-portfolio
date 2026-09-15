@@ -17,6 +17,17 @@ const MotionBox = motion(Box);
 // Project data with hard-coded links
 const featuredProjects = [
   {
+    title: "Root and Shoot",
+    description: "A bullet heaven where you play a little tree that roots and shoots enemies. Grab upgrades, fight bosses, and buy new gear. Made for the Global Game Jam 2023.",
+    image: "/assets/projects/Root1.png",
+    technologies: [
+      { label: "Godot 4", color: "purple" },
+      { label: "Global Game Jam 2023", color: "green" },
+      { label: "Bullet Heaven", color: "red" }
+    ],
+    projectLink: "/projects/root-and-shoot"
+  },
+  {
     title: "Defenders of the Dune",
     description: "A strategic action game set in a harsh desert world. I led the game design and UX/UI design, focusing on engaging mechanics and intuitive interfaces.",
     image: "/assets/projects/DoDImg1.jpg",
@@ -38,18 +49,6 @@ const featuredProjects = [
       { label: "Wave Defense", color: "red" }
     ],
     projectLink: "/projects/wave-defender"
-  },
-  {
-    title: "Marble Tutorial Series",
-    description: "An educational YouTube series teaching 3D game development in Godot 4 by creating a marble obstacle course game similar to Marble Blast Ultra.",
-    image: "/assets/projects/MarbleImg1.png",
-    technologies: [
-      { label: "Godot 4", color: "purple" },
-      { label: "YouTube", color: "red" },
-      { label: "3D Development", color: "blue" },
-      { label: "Education", color: "green" }
-    ],
-    projectLink: "/projects/marble-tutorial-series"
   }
 ];
 
