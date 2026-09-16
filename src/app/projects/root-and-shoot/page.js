@@ -18,9 +18,11 @@ const techs = [
   { label: 'Solo Design & Dev', color: 'blue' },
 ];
 
-const featuredImage = {
-  src: '/assets/projects/Root2.png',
-  alt: 'Root and Shoot gameplay screenshot',
+const featuredMedia = {
+  type: 'video',
+  src: '/assets/projects/RootAndShootGameplaySnippet.mp4',
+  poster: '/assets/projects/Root2.png',
+  alt: 'Root and Shoot gameplay snippet',
 };
 
 const screenshots = [
@@ -188,15 +190,20 @@ export default function RootAndShootPage() {
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
+        bg="black"
       >
-        <Image
-          src={featuredImage.src}
-          alt={featuredImage.alt}
-          width={1280}
-          height={740}
-          priority
+        <video
+          controls
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={featuredMedia.poster}
           style={{ width: '100%', height: 'auto', display: 'block' }}
-        />
+        >
+          <source src={featuredMedia.src} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </MotionBox>
 
       {/* Play on itch.io */}
@@ -607,6 +614,52 @@ enter the pool only after being purchased.`}</Formula>
             </Box>
           ))}
         </SimpleGrid>
+      </MotionBox>
+
+      {/* Case Study PDF Download */}
+      <MotionBox
+        mb={{ base: 12, md: 16 }}
+        textAlign="center"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
+      >
+        <GradientHeading as="h2" size="lg" textAlign="center" mb={3}>
+          Root and Shoot — Game Design Case Study
+        </GradientHeading>
+        <Text
+          fontSize="md"
+          color={{ base: 'gray.600', _dark: 'gray.300' }}
+          maxW="md"
+          mx="auto"
+          mb={6}
+        >
+          Download the full case study as a PDF.
+        </Text>
+        <NextLink href="/assets/projects/Root_and_Shoot_Game_Design_Case_Study.pdf" target="_blank" rel="noopener noreferrer" download>
+          <Button
+            size="lg"
+            borderRadius="full"
+            px={{ base: 10, md: 14 }}
+            py={7}
+            fontWeight="bold"
+            fontSize={{ base: 'lg', md: 'xl' }}
+            color="white"
+            bg="green.500"
+            border="2px solid"
+            borderColor="green.400"
+            boxShadow="0 8px 30px rgba(39, 174, 96, 0.4)"
+            _hover={{
+              bg: 'green.400',
+              transform: 'scale(1.06)',
+              boxShadow: '0 12px 40px rgba(39, 174, 96, 0.55)',
+            }}
+            _active={{ transform: 'scale(0.98)' }}
+            transition="all 0.25s ease"
+          >
+            ↓&nbsp; Download Case Study PDF
+          </Button>
+        </NextLink>
       </MotionBox>
 
       <ProjectNav currentSlug="root-and-shoot" />
