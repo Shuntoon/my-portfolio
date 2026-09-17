@@ -84,8 +84,8 @@ export default function HomePage() {
           mt={4} 
           color={{ base: "gray.600", _dark: "gray.300" }}
         >
-          Creating immersive gaming experiences through innovative design and development. 
-          Passionate about crafting engaging and immersive gameplay experiences.
+          I love making games and tinkering with new ideas, mostly in Godot.
+          Here are some games and prototypes I've been working on, along with a few things I've learned along the way.
         </Text>
       </Box>
 

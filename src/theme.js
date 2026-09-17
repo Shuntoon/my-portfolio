@@ -10,24 +10,23 @@ const theme = createSystem(defaultConfig, {
         heading: { value: "Montserrat, Segoe UI, Arial, sans-serif" },
         mono: { value: "JetBrains Mono, Consolas, Menlo, Monaco, monospace" }
       },
+      radii: {
+        sm: { value: "2px" },
+        md: { value: "3px" },
+        lg: { value: "4px" },
+        xl: { value: "5px" },
+        '2xl': { value: "6px" },
+        '3xl': { value: "8px" },
+      },
       colors: {
         gradientStart: { value: "#ff6b6b" },
         gradientEnd: { value: "#4c74f5" },
       }
     },
-    components: {
-      Heading: {
-        variants: {
-          gradient: {
-            value: {
-              background: "linear-gradient(135deg, #5a9ec4ff 0%, #3a72b0ff 100%)",
-              backgroundClip: "text",
-              textFillColor: "transparent",
-              color: "transparent",
-            }
-          }
-        }
-      }
+    recipes: {
+      button: {
+        base: { borderRadius: "md" },
+      },
     },
   }
 });

@@ -113,7 +113,7 @@ export default function ContactSection() {
           leftIcon={<EmailIcon />}
           colorScheme="blue"
           size="lg"
-          borderRadius="full"
+          borderRadius="md"
           boxShadow="lg"
           bg="rgba(255,255,255,0.25)"
           backdropFilter="blur(12px) saturate(180%)"

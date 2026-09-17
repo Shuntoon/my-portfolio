@@ -165,10 +165,11 @@ export default function AboutSection() {
                 Shane Huntoon
               </GradientHeading>
               <Text fontSize={{ base: "md", md: "lg" }} lineHeight="tall" color={{ base: "gray.600", _dark: "gray.300" }}>
-                I'm a game developer with a passion for turning ideas into simple and interactive experiences. 
-                I enjoy exploring new technologies, refining my craft, and building new game projects, especially in Godot.
-                Outside of development, you'll usually find me gaming, playing pickleball, watching sports, or trying 
-                something new in the kitchen.
+                I love making games and tinkering with new ideas, mostly in Godot. A lot of my projects
+                start with a mechanic I want to try out, and sometimes the scope gets a little out of hand.
+                This site is where I share the games, prototypes, and experiments I've been working on.
+                When I'm not making games, I'm usually playing them, playing pickleball, watching sports,
+                or trying something new in the kitchen.
               </Text>
             </Box>
             {/* Labeled social links below the bio */}

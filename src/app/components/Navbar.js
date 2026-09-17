@@ -96,7 +96,6 @@ export default function Navbar() {
             cursor="pointer"
             _hover={{
               transform: 'scale(1.08)',
-              textShadow: '0 0 16px #4fb1df, 0 0 32px #4c74f5, 0 0 48px #ff6b6b',
             }}
           >
             Shane Huntoon
