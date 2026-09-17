@@ -87,7 +87,7 @@ export default function ProjectsSection() {
 				mb={12}
 				color={{ base: 'gray.600', _dark: 'gray.300' }}
 			>
-				A collection of my work across web development, game development, and educational content.
+				A collection of my games, prototypes, and game development tutorials.
 			</Text>
 
 			{/* Project Cards using FeaturedProject component */}
