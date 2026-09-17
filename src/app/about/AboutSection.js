@@ -109,6 +109,8 @@ export default function AboutSection() {
       {/* Profile Card with Glass Effect */}
       <MotionBox
         mb={16}
+        maxW="1100px"
+        mx="auto"
         p={{ base: 6, md: 8 }}
         borderRadius="2xl"
         bg={{ base: "rgba(255, 255, 255, 0.08)", _dark: "rgba(0, 0, 0, 0.15)" }}
@@ -120,20 +122,20 @@ export default function AboutSection() {
       >
         <Stack
           direction={{ base: "column", md: "row" }}
-          align="center"
-          spacing={8}
+          align={{ base: "center", md: "flex-start" }}
+          gap={{ base: 6, md: 8, lg: 10 }}
           w="100%"
           justify="center"
         >
           <MotionBox
-            w="150px"
-            h="150px"
+            w={{ base: "150px", lg: "180px" }}
+            h={{ base: "150px", lg: "180px" }}
+            flexShrink={0}
             borderRadius="full"
             overflow="hidden"
             border="4px solid"
             borderColor={{ base: "rgba(255, 255, 255, 0.3)", _dark: "rgba(255, 255, 255, 0.2)" }}
             boxShadow="0 4px 20px rgba(0, 0, 0, 0.15)"
-            mr={{ base: 0, md: 8 }}
             whileHover={{
               scale: 1.1,
               transition: { duration: 0.7, type: "spring" }
@@ -150,56 +152,64 @@ export default function AboutSection() {
               }}
             />
           </MotionBox>
-          <Box maxW="lg" display="flex" alignItems="center">
-            <Box flex="1">
+          <Box flex="1" minW={0} w="100%">
+            <Box>
               <GradientHeading
                 as="h2"
-                size="lg"
-                mb={2}
+                size={{ base: "lg", md: "xl" }}
+                mb={3}
                 display="flex"
                 alignItems="center"
                 gap={2}
               >
                 Shane Huntoon
               </GradientHeading>
-              <Text fontSize="md" color={{ base: "gray.600", _dark: "gray.300" }}>
+              <Text fontSize={{ base: "md", md: "lg" }} lineHeight="tall" color={{ base: "gray.600", _dark: "gray.300" }}>
                 I'm a game developer with a passion for turning ideas into simple and interactive experiences. 
                 I enjoy exploring new technologies, refining my craft, and building new game projects, especially in Godot.
                 Outside of development, you'll usually find me gaming, playing pickleball, watching sports, or trying 
                 something new in the kitchen.
               </Text>
             </Box>
-            {/* Social Links as Apple Glass Icons to the right of summary */}
-            <SimpleGrid columns={2} spacing={8} ml={6}>
+            {/* Labeled social links below the bio */}
+            <SimpleGrid columns={{ base: 2, lg: 4 }} gap={3} mt={6}>
               {socialLinks.map((link) => (
-                <a
+                <Box
+                  as="a"
                   key={link.label}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ display: 'inline-flex', alignItems: 'center' }}
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  gap={3}
+                  minH={{ base: "56px", md: "64px" }}
+                  px={3}
+                  py={3}
+                  bg={{ base: "whiteAlpha.600", _dark: "whiteAlpha.100" }}
+                  borderRadius="xl"
+                  border="1px solid"
+                  borderColor={{ base: "blackAlpha.200", _dark: "whiteAlpha.200" }}
+                  color={{ base: "gray.800", _dark: "gray.100" }}
+                  textDecoration="none"
+                  boxShadow="0 2px 8px rgba(0,0,0,0.08)"
+                  transition="background 0.2s, box-shadow 0.2s"
+                  _hover={{
+                    bg: { base: "whiteAlpha.900", _dark: "whiteAlpha.200" },
+                    boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
+                  }}
+                  _focusVisible={{ outline: '3px solid', outlineColor: 'blue.400', outlineOffset: '3px' }}
                 >
                   <Box
                     as={link.icon}
-                    boxSize={{ base: 12, md: 9 }} // Bigger on mobile, normal on desktop
-                    p={2}
-                    bg="rgba(255,255,255,0.18)"
-                    backdropFilter="blur(8px) saturate(180%)"
-                    borderRadius="xl"
-                    border="1px solid"
-                    borderColor="rgba(255,255,255,0.25)"
+                    boxSize={7}
+                    flexShrink={0}
                     color={link.color}
-                    transition="transform 0.2s, box-shadow 0.2s"
-                    boxShadow="0 2px 8px rgba(0,0,0,0.10)"
-                    _hover={{
-                      transform: 'scale(1.18)',
-                      boxShadow: '0 4px 16px rgba(0,0,0,0.18)',
-                      bg: 'rgba(255,255,255,0.28)'
-                    }}
-                    mr={2}
-                    mb={2}
+                    aria-hidden="true"
                   />
-                </a>
+                  <Text as="span" fontSize="sm" fontWeight="semibold">{link.label}</Text>
+                </Box>
               ))}
             </SimpleGrid>
           </Box>
