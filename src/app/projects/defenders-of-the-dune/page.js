@@ -213,10 +213,13 @@ export default function DefendersOfTheDunePage() {
             </Text>
             <VStack spacing={2} align="start">
               <Text fontSize="md" color={{ base: 'gray.600', _dark: 'gray.300' }}>
-                • Designed and implemented the gameplay UI for clarity and engagement.
+                • Contributed to game design, creating ideas for enemies, equipment, encounters, and progression.
               </Text>
               <Text fontSize="md" color={{ base: 'gray.600', _dark: 'gray.300' }}>
                 • Developed core gameplay systems and mechanics.
+              </Text>
+              <Text fontSize="md" color={{ base: 'gray.600', _dark: 'gray.300' }}>
+                • Designed and implemented the gameplay UI for clarity and engagement.
               </Text>
               <Text fontSize="md" color={{ base: 'gray.600', _dark: 'gray.300' }}>
                 • Assisted with art direction to ensure a cohesive visual style.

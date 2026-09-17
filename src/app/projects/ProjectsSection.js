@@ -43,6 +43,17 @@ const allProjects = [
 		projectLink: '/projects/defenders-of-the-dune',
 	},
 	{
+		title: 'Godot Prototypes',
+		description: 'Check out some of my prototypes! I love making games, but the scope often ends up being too large. Here are a few game ideas I wanted to show you guys.',
+		image: '/assets/projects/Prototype2.png',
+		technologies: [
+			{ label: 'Godot', color: 'purple' },
+			{ label: 'Game Design', color: 'blue' },
+			{ label: 'Prototyping', color: 'green' },
+		],
+		projectLink: '/projects/godot-prototypes',
+	},
+	{
 		title: 'Marble Tutorial Series',
 		description: 'An educational YouTube series teaching 3D game development in Godot 4 by creating a marble obstacle course game similar to Marble Blast Ultra.',
 		image: '/assets/projects/MarbleImg1.png',
